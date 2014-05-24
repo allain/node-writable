@@ -1,6 +1,6 @@
 {
   "name": "writable",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Easily implement a writable stream",
   "main": "index.js",
   "scripts": {
