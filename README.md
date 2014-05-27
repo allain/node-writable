@@ -47,8 +47,6 @@ the method signature for [Writable._write](http://nodejs.org/api/stream.html#str
 implicitly call the callback for you.  That's a handy little shortcut for the common case of doing something on the writer
 that is a sync action.
 
-##### function writable(function callback(string/buffer/object item, <string encoding>, <function callback>))
-
 That's really all there is to it.
 
 ### license
