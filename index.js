@@ -16,7 +16,8 @@ var writeAsync = function(action) {
   }
 }
 
-module.exports = function(opts, cb) {
+
+function buildWriter(opts, cb) {
   if(typeof opts === 'function') {
     cb = opts
     opts = {}
@@ -26,3 +27,16 @@ module.exports = function(opts, cb) {
   writable._write = action
   return writable
 }
+
+buildWriter.obj = function(opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts;
+    opts = { objectMode: true }
+  } else {
+    opts.objectMode = true
+  }
+
+  return buildWriter(opts, cb)
+}
+
+module.exports = buildWriter
